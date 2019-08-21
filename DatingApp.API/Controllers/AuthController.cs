@@ -49,7 +49,7 @@ namespace DatingApp.API.Controllers
         {
             var userFromRepo = await _authRepository.Login(userForLoginDTO.Username.ToLower(), userForLoginDTO.Password);
             
-            if (userForLoginDTO == null) return Unauthorized();
+            if (userFromRepo == null) return Unauthorized();
 
             var claims = new[] {
                 new Claim(ClaimTypes.NameIdentifier, userFromRepo.Id.ToString()),

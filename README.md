@@ -1,10 +1,8 @@
 # DatingApp
-Test project to learn Angular/.NET Core
-
 Project based on Udemy course "Build an app with ASPNET Core and Angular from scratch"
 
-With this project I'm learning:
 
+With this project I'm learning:
 -Angular
 -.NET Core
 -Migrations

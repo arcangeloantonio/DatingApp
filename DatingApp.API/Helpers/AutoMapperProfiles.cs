@@ -9,6 +9,7 @@ namespace DatingApp.API.Helpers
     {
         public AutoMapperProfiles()
         {
+            //Entity to DTO
             CreateMap<User, UserForListDTO>().ForMember(dest => dest.PhotoURL, opt => {
                 opt.MapFrom(src => src.Photos.FirstOrDefault(p => p.IsMain).Url);
             }).ForMember(dest => dest.Age, opt => {
@@ -20,7 +21,11 @@ namespace DatingApp.API.Helpers
                 opt.MapFrom(d => d.DateOfBirth.CalculateAge());
             });
             CreateMap<Photo, PhotosForDetailedDTO>();
+            CreateMap<Photo, PhotoForReturnDto>();
+
+            //DTO to Entity
             CreateMap<UserForUpdateDto, User>();
+            CreateMap<PhotoForCreationDto, Photo>();
         }
     }
 }

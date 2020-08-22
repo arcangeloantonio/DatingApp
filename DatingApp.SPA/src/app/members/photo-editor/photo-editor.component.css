@@ -3,3 +3,11 @@ img.img-thumbnail {
     min-width: 100px !important;
     margin-bottom: 2px;
 }
+
+.nv-file-over {
+    border: 3px dotted #FF0000;
+}
+
+input[type="file"] {
+    color: transparent;
+}
